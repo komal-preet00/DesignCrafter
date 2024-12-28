@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 
 // Import your design images
 import Design1 from '../assets/d1.png';
@@ -13,6 +14,10 @@ import Design5 from '../assets/d5.png';
 import Design6 from '../assets/d6.png';
 import Design7 from '../assets/d7.png';
 import Design8 from '../assets/d8.png';
+import landscape1 from '../assets/c1.png';
+import landscape2 from '../assets/c2.png';
+import landscape3 from '../assets/c1.png';
+import landscape4 from '../assets/c3.png';
 
 const designs = [
   {
@@ -57,15 +62,34 @@ const designs = [
   }
 ];
 
+const sliderImages = [
+  { 
+    image: landscape1,
+    alt: "Landscape Image 1",
+  },
+  { 
+    image: landscape2,
+    alt: "Landscape Image 2",
+  },
+  { 
+    image: landscape3,
+    alt: "Landscape Image 3",
+  },
+  { 
+    image: landscape4,
+    alt: "Landscape Image 4",
+  },
+];
+
 const Designs = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 py-8 sm:py-12 lg:py-16">
       {/* Heading Section */}
       <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-        <h1 className="text-[#105750] font-poppins text-4xl sm:text-5xl lg:text-[70px] font-bold mb-4 sm:mb-6 lg:mb-8">
+        <h1 className="text-[#105750] font-poppins text-4xl sm:text-5xl lg:text-[60px] font-bold mb-4 sm:mb-6 lg:mb-8">
           Our Designs
         </h1>
-        <p className="text-[#105750] font-poppins text-lg sm:text-xl lg:text-[28px] max-w-7xl mx-auto leading-tight px-2 sm:px-4">
+        <p className="text-[#105750] font-poppins text-lg sm:text-xl lg:text-[22px] max-w-7xl mx-auto leading-tight px-2 sm:px-4">
           At Designer crafter, we craft innovative designs that elevate brands and inspire audiences. 
           Our team of experts blend creativity with technical expertise to deliver tailored solutions. 
           From concept to launch, we bring digital dreams to life with precision, passion, and creativity.
@@ -135,6 +159,32 @@ const Designs = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+
+      {/* Auto-playing Landscape Slider */}
+      <div className="mt-16 flex justify-center">
+        <div className="w-[1220px] h-[330px] bg-[#105750] rounded-[21px] shadow-lg overflow-hidden">
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            className="h-full"
+          >
+            {sliderImages.map((slide, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={slide.image}
+                  alt={slide.alt}
+                  className="w-full h-full object-cover"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   );
