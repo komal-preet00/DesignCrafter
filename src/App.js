@@ -4,6 +4,7 @@ import Designs from './components/Designs';
 import Team from './components/Team';
 import WeDo from './components/WeDo';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <WeDo/>
       <Team />
       <Contact/>
+      <Footer />
     </div>
   );
 }
