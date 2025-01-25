@@ -5,22 +5,22 @@ const Navbar = () => {
   return (
     <header className="w-full">
       {/* Top Navbar */}
-      <nav className="w-full bg-white py-2 px-6 shadow-sm">
+      <nav className="w-full bg-white  px-6 shadow-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex-1">
             <img
               src={logo}
               alt="Design Crafters Logo"
-              className="w-[90px] h-[80px] rounded-[45px]"
+              className="w-[172px] h-[72px] rounded-[45px]"
             />
           </div>
 
           {/* Page Title */}
           <div className="flex-2 text-center">
-            <h1 className="font-baloo text-[45px] font-bold text-[#185D56]">
-              Designn Crafters
-            </h1>
+            <h2 className="font-baloo text-[38px] font-semibold text-[#185D56]">
+              Design Crafters
+            </h2>
           </div>
 
           <div className="flex-1"></div>

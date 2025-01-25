@@ -13,7 +13,7 @@ const Footer = () => {
             <img 
               src={logo} 
               alt="Design Crafters Logo" 
-              className="h-32 mb-4 rounded-full ml-10"
+              className="h-32 mb-4 rounded-full ml-4"
             />
           </div>
           <div className="text-center">
